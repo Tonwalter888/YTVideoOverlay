@@ -374,7 +374,7 @@ static void sortButtons(NSMutableArray <NSString *> *buttons) {
                 YTQTMButton *enterExitFullscreenButton = [[rightIconsView valueForKey:@"_enterExitFullscreenButtonView"] valueForKey:@"_enterExitFullscreenButton"];
                 frame = rightIconsView.frame;
                 cornerRadius = enterExitFullscreenButton.layer.cornerRadius;
-                fullscreenButtonWidth = enterExitFullscreenButton.size.width;
+                fullscreenButtonWidth = rightIconsView.size.width;
                 fullscreenImageWidth = enterExitFullscreenButton.currentImage.size.width;
             }
         }
