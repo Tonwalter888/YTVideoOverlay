@@ -368,6 +368,13 @@ static void sortButtons(NSMutableArray <NSString *> *buttons) {
             frame = exit.frame;
             fullscreenButtonWidth = frame.size.width;
             fullscreenImageWidth = exit.currentImage.size.width;
+        } else {
+            UIView *rightIconsView = [self valueForKey:@"_rightIconsView"];
+            frame = rightIconsView.frame;
+            YTQTMButton *enterExitFullscreenButton = [[rightIconsView valueForKey:@"_enterExitFullscreenButtonView"] valueForKey:@"_enterExitFullscreenButton"];
+            cornerRadius = enterExitFullscreenButton.layer.cornerRadius;
+            fullscreenButtonWidth = enterExitFullscreenButton.size.width;
+            fullscreenImageWidth = enterExitFullscreenButton.currentImage.size.width;
         }
     }
     if (CGRectIsEmpty(frame) || frame.origin.x <= 0 || frame.origin.y < -4) return;
